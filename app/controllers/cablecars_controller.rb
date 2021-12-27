@@ -1,0 +1,2 @@
+class CablecarsController < ApplicationController
+end
