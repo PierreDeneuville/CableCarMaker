@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :cable_cars, dependent: destroy
+  has_many :cable_cars, dependent: :destroy
 end

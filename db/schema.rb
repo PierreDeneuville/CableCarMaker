@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_27_104608) do
+ActiveRecord::Schema.define(version: 2021_12_27_105515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cable_cars", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.integer "seats"
+    t.decimal "price"
+    t.boolean "is_full"
+    t.string "city"
+    t.integer "travel_length"
+    t.integer "travel_speed"
+    t.integer "travel_time"
+    t.integer "upper_terminal"
+    t.integer "lower_terminal"
+    t.text "photos"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_cable_cars_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +45,5 @@ ActiveRecord::Schema.define(version: 2021_12_27_104608) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cable_cars", "users"
 end
