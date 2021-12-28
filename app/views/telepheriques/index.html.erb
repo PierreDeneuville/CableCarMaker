@@ -1,2 +1,23 @@
 <p>Voici nos téléphériques</p>
-<%= link_to "new telepherique", new_telepherique_path %>
+<%= link_to "Ajouter un telepherique", new_telepherique_path %>
+
+<div class="index-container">
+
+  <% @telepheriques.each do |telepherique|%>
+    <%= link_to telepherique_path(telepherique) do %>
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag(telepherique.photo.key, width: 400, height: 300, crop: :fill, class:"card-img-top") %>
+        <div class="card-body">
+          <h5 class="card-title"> <%= telepherique.localisation %></h5>
+
+          <div class="car-practical-info">
+
+            <p class="card-text"><%= image_tag "location-pin" , class:"pin-icon"%><%= telepherique.localisation  %> </p>
+
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

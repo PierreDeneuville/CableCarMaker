@@ -3,7 +3,7 @@
     <%= simple_form_for @telepherique do |f| %>
       <%= f.input :localisation %>
       <%= f.input :seats %>
-      <%= f.input :photos %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit "Confirm", class: "btn btn-primary" %>
     <% end %>
   </div>
