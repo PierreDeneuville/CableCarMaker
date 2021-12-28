@@ -1,7 +1,6 @@
 <div class="container">
   <div class="form-box">
-
-    <%= simple_form_for(@cablecar) do |f| %>
+    <%= simple_form_for @cablecar do |f| %>
       <%= f.input :name %>
       <%= f.input :seats %>
       <%= f.input :price %>
@@ -14,9 +13,5 @@
       <%= f.input :photos %>
       <%= f.submit "Confirm", class: "btn btn-primary" %>
     <% end %>
-
-
-    <%= link_to "Back to all cable cars", cablecars_path, class: "btn btn-flat" %>
-
   </div>
 </div>

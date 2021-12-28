@@ -11,11 +11,12 @@ class CablecarsController < ApplicationController
     @cablecar = CableCar.new
     @user = current_user
     @cablecar.user = @user
-
   end
 
   def create
     @cablecar = CableCar.new(cablecar_params)
+    @user = current_user
+    @cablecar.user = @user
 
     if @cablecar.save
       flash[:notice] = "Your cablecar was successfully saved"

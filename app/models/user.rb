@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cable_cars, dependent: :destroy
+  has_many :telepheriques, dependent: :destroy
 end
