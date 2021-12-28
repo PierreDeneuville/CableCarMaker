@@ -1,0 +1,30 @@
+.show-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.show-top-info {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+// .show-img-box {
+
+// }
+
+.show-image {
+  width: 50%;
+  padding: 0px 20px;
+}
+
+.show-info-box {
+  width: 50%;
+}
+
+.form-box {
+  background-color: rgb(195, 211, 211);
+  border-radius: 5px;
+  padding: 10px;
+}

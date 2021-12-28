@@ -1,0 +1,19 @@
+<%= @telepherique.localisation %>
+<%= @telepherique.seats %>
+<%= @telepherique.photo %>
+
+<div class="container">
+  <div class="show-header">
+    <h2> Nom du téléphérique </h2>
+    <%= link_to "Retour aux telepheriques", telepheriques_path, class: "btn btn-flat" %>
+  </div>
+
+  <div class="show-top-info">
+    <%= cl_image_tag(@telepherique.photo.key, width: 400, height: 300, crop: :fill) %>
+
+    <div class="show-info-box">
+      <h4> <%= image_tag "location-pin", class:"pin-icon"%><%= @telepherique.localisation %> </h3>
+      <h4> Contact email : <%= @telepherique.user.email %></h4>
+    </div>
+  </div>
+</div>
