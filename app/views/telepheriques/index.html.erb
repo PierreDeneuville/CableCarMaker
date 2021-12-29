@@ -1,6 +1,9 @@
 <p>Voici nos téléphériques</p>
 <%= link_to "Ajouter un telepherique", new_telepherique_path %>
 
+<%= cl_image_tag("pic1_rptarm",
+      width: 400, height: 300, crop: :fill) %>
+
 <div class="index-container">
 
   <% @telepheriques.each do |telepherique|%>
