@@ -1,8 +1,14 @@
 <div class="container">
   <div class="form-box">
     <%= simple_form_for @telepherique do |f| %>
-      <%= f.input :localisation %>
-      <%= f.input :seats %>
+      <%= f.input :name, label: "Nom" %>
+      <%= f.input :localisation, label: "Ville" %>
+      <%= f.input :travel_length, label: "Longueur (en m)" %>
+      <%= f.input :travel_speed, label: "Vitesse (m/seconde)" %>
+      <%= f.input :travel_time, label: "Durée du trajet" %>
+      <%= f.input :lower_terminal, label: "Altitude départ"  %>
+      <%= f.input :upper_terminal, label: "Altitude arrivée" %>
+      <%= f.input :seats, label: "Capacité des cabines" %>
       <%= f.input :photo, as: :file %>
       <%= f.submit "Confirm", class: "btn btn-primary" %>
     <% end %>

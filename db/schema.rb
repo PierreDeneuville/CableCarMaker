@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_28_232459) do
+ActiveRecord::Schema.define(version: 2021_12_28_235603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,14 @@ ActiveRecord::Schema.define(version: 2021_12_28_232459) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "photo"
+    t.decimal "price", default: "0.0", null: false
+    t.text "name"
+    t.boolean "is_full", default: false
+    t.text "travel_length"
+    t.text "travel_speed"
+    t.text "travel_time"
+    t.integer "upper_terminal"
+    t.integer "lower_terminal"
     t.index ["user_id"], name: "index_telepheriques_on_user_id"
   end
 
